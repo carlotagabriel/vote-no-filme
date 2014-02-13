@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <package name="user" extends="struts-default">
+        <action name="user" class="carlota.votenofilme.actions.UserInfo">
+            <result name="input">/info_page.jsp</result>
+	        <result type="redirectAction">
+	            <param name="actionName">/movies_list.action</param>
+	        </result>
+        </action>
+    </package>
+    
+</struts>
